@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import Login from './Login/Login.jsx';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-
+    <div class="container">
+      <Login />
     </div>
   );
 }

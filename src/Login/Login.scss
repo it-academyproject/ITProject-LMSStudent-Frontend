@@ -1,0 +1,42 @@
+/*
+Fondo whitesmoke F5F5F5
+Segundario gainsboro DCDCDC
+Botones dodgerblue 1E90FF
+Letras 48494B 363636
+*/
+
+:root {
+  --secondary-color: #DCDCDC;
+  --button-color: #1E90FF;
+}
+
+#login {
+  height: 100vh;
+}
+
+#welcome-box {
+  background-color: var(--secondary-color);
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+
+#form {
+  border-left: solid var(--secondary-color) 3px;
+  border-bottom: solid var(--secondary-color) 3px;
+  border-right: solid var(--secondary-color) 3px;
+  border-bottom-left-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#login-btn {
+  border: none;
+  background-color: var(--button-color);
+}
+
+.form:focus {
+  border-color: red;
+  background-color: red;
+  color: red;
+}
