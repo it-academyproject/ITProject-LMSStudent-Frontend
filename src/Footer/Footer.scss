@@ -1,0 +1,20 @@
+$bg-color: whitesmoke;
+$second-color: gainsboro;
+$btn-color: dodgerblue;
+$font-color1: #48494B;
+$font-color2: #363636; 
+
+
+.footer {
+    width: 100%;
+    margin-top: auto;
+    height: 5vh;
+    background-color: $bg-color;
+    border-top: 2px $btn-color solid;
+
+    .footer-container {
+        height: 100%;
+        width: 100%;
+    }
+
+}
