@@ -1,42 +1,54 @@
-/*
-Fondo whitesmoke F5F5F5
-Segundario gainsboro DCDCDC
-Botones dodgerblue 1E90FF
-Letras 48494B 363636
-*/
-
-:root {
-  --secondary-color: #DCDCDC;
-  --button-color: #1E90FF;
-}
+$secondary-color: #dcdcdc;
+$detail-color: #1e90ff;
 
 #login {
   height: 100vh;
 }
 
-#welcome-box {
-  background-color: var(--secondary-color);
-  border-top-left-radius: .25rem;
-  border-top-right-radius: .25rem;
+#login-header {
+  background-color: $secondary-color;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  cursor: default;
 }
 
-#form {
-  border-left: solid var(--secondary-color) 3px;
-  border-bottom: solid var(--secondary-color) 3px;
-  border-right: solid var(--secondary-color) 3px;
-  border-bottom-left-radius: .25rem;
-  border-bottom-right-radius: .25rem;
+#login-form {
+  border-top: none !important;
+  border: solid $secondary-color 3px;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-#login-btn {
+.form-control {
   border: none;
-  background-color: var(--button-color);
+  border-bottom: solid $secondary-color 2px;
+  border-radius: 0;
+  transition: border-bottom 0.4s ease;
 }
 
-.form:focus {
-  border-color: red;
-  background-color: red;
-  color: red;
+.form-control:focus {
+  border-bottom: solid $detail-color 2px;
+}
+
+#login-btn {
+  border: none;
+  background-color: $detail-color;
+  border-radius: 1.5rem;
+  transition: border-radius 0.2s linear;
+}
+
+#login-btn:hover {
+  border-radius: 0.25rem;
+}
+
+#forgot-pwd {
+  color: #48494b;
+  transition: color 0.2s linear;
+}
+
+#forgot-pwd:hover {
+  text-decoration: none;
+  color: $detail-color;
 }
