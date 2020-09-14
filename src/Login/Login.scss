@@ -1,0 +1,54 @@
+$secondary-color: #dcdcdc;
+$detail-color: #1e90ff;
+
+#login {
+  height: 100vh;
+}
+
+#login-header {
+  background-color: $secondary-color;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  cursor: default;
+}
+
+#login-form {
+  border-top: none !important;
+  border: solid $secondary-color 3px;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.form-control {
+  border: none;
+  border-bottom: solid $secondary-color 2px;
+  border-radius: 0;
+  transition: border-bottom 0.4s ease;
+}
+
+.form-control:focus {
+  border-bottom: solid $detail-color 2px;
+}
+
+#login-btn {
+  border: none;
+  background-color: $detail-color;
+  border-radius: 1.5rem;
+  transition: border-radius 0.2s linear;
+}
+
+#login-btn:hover {
+  border-radius: 0.25rem;
+}
+
+#forgot-pwd {
+  color: #48494b;
+  transition: color 0.2s linear;
+}
+
+#forgot-pwd:hover {
+  text-decoration: none;
+  color: $detail-color;
+}
