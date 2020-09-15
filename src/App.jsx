@@ -7,7 +7,7 @@ import MaterialList from './Material/MaterialList.jsx';
 import teachingMaterial from './teachingMaterial.json';
 
 const loggedIn = true;
-const student = true;
+const student = false;
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
         loggedIn ?
           <>
             <Header />
-            <main className="container content">
+            <main className="container content d-flex flex-column justify-content-center">
               <MaterialList
                 teachingMaterial={teachingMaterial}
                 student={student}

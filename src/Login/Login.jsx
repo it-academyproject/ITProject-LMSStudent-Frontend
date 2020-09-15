@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 
 const Login = () => {
     return (
-        <Row id="login">
+        <Row id="login" className="vh-100">
             <Col className="m-auto" xs={10} sm={9} md={7} lg={5} xl={4}>
                 <div id="login-header">
                     <h1 className="text-center mb-0 pb-1">ITAcademy</h1>
