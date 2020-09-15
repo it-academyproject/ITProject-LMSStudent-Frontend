@@ -49,12 +49,10 @@ $font-color2: #363636;
 }
 
 .nav-item {
-    height: 100%;
-    // color: $font-color1 !important;
     border-radius: 5px;
-
     &:hover {
-        background-color: dodgerblue;
+        text-decoration: none;
+        background-color: $btn-color;
         color: $bg-color !important;
     }
 }
@@ -63,3 +61,5 @@ $font-color2: #363636;
     background-color: dodgerblue;
     color: $bg-color !important;
 }
+
+

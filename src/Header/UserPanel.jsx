@@ -1,6 +1,5 @@
 import React from 'react';
 import { VscAccount } from 'react-icons/vsc';
-import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
 
 function UserPanel () {

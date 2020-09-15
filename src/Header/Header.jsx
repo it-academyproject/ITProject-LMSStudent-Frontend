@@ -11,8 +11,8 @@ import { Link } from 'react-router-dom';
 function Header () {
 
     const [activeLink, setActiveLink] = useState();
-    const normalLinkStyle= "nav-item px-3 mx-5 my-0";
-    const activeLinkStyle = "nav-item px-3 mx-5 my-0 active-link";
+    const normalLinkStyle= "nav-item px-3 py-1 mx-5 my-0 clear-link";
+    const activeLinkStyle = "nav-item px-3 py-1 mx-5 my-0 active-link clear-link";
 
     return (
         <Navbar className="header" collapseOnSelect expand="lg">

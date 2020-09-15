@@ -1,4 +1,6 @@
 $secondary-color: #dcdcdc;
+$btn-text: #F5F5F5;
+$btn-hover-color: #1672cf;
 $detail-color: #1e90ff;
 $text-color: #48494b;
 
@@ -63,3 +65,15 @@ small {
 }
 
 ////////////////
+/// Button style
+.btn-style {
+  border-radius: 5px;
+  background-color: $detail-color;
+  color: $btn-text !important;
+  padding: 0.5rem 1rem;
+  &:hover {
+      text-decoration: none;
+      background-color: $btn-hover-color;
+  }
+}
+///
