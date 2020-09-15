@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import UserPanel from './UserPanel';
+import UserPanel from './UserPanel.jsx';
 import './Header.scss';
 
 
