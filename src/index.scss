@@ -1,0 +1,56 @@
+$secondary-color: #dcdcdc;
+$detail-color: #1e90ff;
+$text-color: #48494b;
+
+* {
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-size: 2em !important;
+  color: $text-color;
+}
+
+h2 {
+  font-size: 1.5em !important;
+  color: $text-color;
+}
+
+p {
+  font-size: 1em;
+  color: $text-color;
+}
+
+label {
+  color: $text-color;
+}
+
+small {
+  color: $text-color;
+}
+
+// STYLING SPECIFIC FOR TABLES
+.table thead th {
+  color: $text-color;
+  border-top: none;
+  border-bottom: none;
+}
+
+.table td {
+  color: $text-color;
+  border-top: none;
+}
+
+.table-border-right {
+  border-right: solid 1px #dcdcdc;
+}
+
+.input-group-text {
+  background-color: transparent;
+  border: none;
+}
+
+.fa-trash-alt {
+  color: #ff0000;
+}
+//////////////////////////////
