@@ -1,5 +1,4 @@
 import React from 'react';
-import '../index.css';
 import './Login.scss';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -21,7 +20,7 @@ const Login = () => {
                         <Form.Control type="password" className="shadow-none" placeholder="Password" />
                     </Form.Group>
                     <div className="text-center">
-                        <Button id="login-btn" className=" w-50">LOGIN</Button>
+                        <Button id="login-btn" className="w-50">LOGIN</Button>
                     </div>
                     <div className="text-center mt-1 mb-2">
                         <small><a id="forgot-pwd" href="/">Forgot password?</a></small>
