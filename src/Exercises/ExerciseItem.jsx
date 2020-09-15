@@ -2,11 +2,10 @@ import React from 'react';
 import { FaRegFile, FaDownload } from 'react-icons/fa';
 
 const ExerciseItem = (props) => {
-    const { exercise } = props;
+    const { exercise, student } = props;
 
-    return (
-        <tr>
-            <td className="py-2 table-border-right">{exercise.name}</td>
+    const student_view =
+        <>
             <td className="py-2 table-border-right">{exercise.estimated_time}</td>
             <td className="py-2 table-border-right">{exercise.correction_status ? "Finished" : "Pending"}</td>
             <td className="py-2 table-border-right text-center">
@@ -19,6 +18,15 @@ const ExerciseItem = (props) => {
                     onClick={() => console.log("Downloading...")}
                 />
             </td>
+        </>;
+    const teacher_view = <td className="py-2 table-border-right">{exercise.unchecked}</td>
+
+    return (
+        <tr>
+            <td className="py-2 table-border-right">{exercise.name}</td>
+            {
+                student ? student_view : teacher_view
+            }
         </tr>
     )
 }

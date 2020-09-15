@@ -9,6 +9,7 @@ import ExerciseList from './Exercises/ExerciseList.jsx';
 import exercises from './exercises.json';
 
 const logged_in = true;
+const student = false;
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
 
               <ExerciseList
                 exercises={exercises}
+                student={student}
               />
 
             </main>

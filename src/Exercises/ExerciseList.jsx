@@ -6,13 +6,21 @@ import Table from 'react-bootstrap/Table';
 
 const ExerciseList = (props) => {
 
-    const { exercises } = props;
+    const { exercises, student } = props;
 
     const exercise_list = exercises.map((exercise, index) => {
         return (
-            <ExerciseItem key={index} exercise={exercise} />
+            <ExerciseItem key={index} exercise={exercise} student={student} />
         )
     });
+
+    const student_titles =
+        <>
+            <th className="py-2 table-border-right">Estimated time</th>
+            <th className="py-2 table-border-right">Correction Status</th>
+            <th className="py-2 table-border-right text-center">Deliver</th>
+        </>;
+    const teacher_titles = <th className="py-2 table-border-right">Unchecked</th>;    
 
     return (
         <Row className="d-flex justify-content-center">
@@ -21,9 +29,9 @@ const ExerciseList = (props) => {
                     <thead>
                         <tr>
                             <th className="py-2 table-border-right">Name</th>
-                            <th className="py-2 table-border-right">Estimated time</th>
-                            <th className="py-2 table-border-right">Correction Status</th>
-                            <th className="py-2 table-border-right text-center">Deliver</th>
+                            {
+                                student ? student_titles : teacher_titles
+                            }
                         </tr>
                     </thead>
                     <tbody>
