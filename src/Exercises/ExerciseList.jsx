@@ -25,7 +25,7 @@ const ExerciseList = (props) => {
     return (
         <Row className="d-flex justify-content-center">
             <Col xs={12} lg={10}>
-                <Table striped className="mt-3">
+                <Table className="mb-0" striped>
                     <thead>
                         <tr>
                             <th className="py-2 table-border-right">Name</th>
