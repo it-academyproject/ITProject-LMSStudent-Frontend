@@ -1,6 +1,6 @@
 import React from 'react';
 import './Material.scss';
-import InputGroup from 'react-bootstrap/InputGroup'
+import InputGroup from 'react-bootstrap/InputGroup';
 
 const MaterialItem = (props) => {
     let { material, student } = props;
