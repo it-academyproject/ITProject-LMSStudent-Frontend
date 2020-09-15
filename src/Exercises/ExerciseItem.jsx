@@ -8,7 +8,7 @@ const ExerciseItem = (props) => {
         <>
             <td className="py-2 table-border-right">{exercise.estimated_time}</td>
             <td className="py-2 table-border-right">{exercise.correction_status ? "Finished" : "Pending"}</td>
-            <td className="py-2 table-border-right text-center">
+            <td className="py-2 text-center">
                 <FaRegFile
                     className="fa-exercice-icons mx-1"
                     onClick={() => console.log("Delivered")}
@@ -19,7 +19,7 @@ const ExerciseItem = (props) => {
                 />
             </td>
         </>;
-    const teacher_view = <td className="py-2 table-border-right">{exercise.unchecked}</td>
+    const teacher_view = <td className="py-2">{exercise.unchecked}</td>
 
     return (
         <tr>

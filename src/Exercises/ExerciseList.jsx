@@ -18,9 +18,9 @@ const ExerciseList = (props) => {
         <>
             <th className="py-2 table-border-right">Estimated time</th>
             <th className="py-2 table-border-right">Correction Status</th>
-            <th className="py-2 table-border-right text-center">Deliver</th>
+            <th className="py-2 text-center">Deliver</th>
         </>;
-    const teacher_titles = <th className="py-2 table-border-right">Unchecked</th>;    
+    const teacher_titles = <th className="py-2">Unchecked</th>;    
 
     return (
         <Row className="d-flex justify-content-center">

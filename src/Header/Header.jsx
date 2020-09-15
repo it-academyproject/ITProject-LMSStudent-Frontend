@@ -3,6 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import UserPanel from './UserPanel.jsx';
 import './Header.scss';
+import { Link } from 'react-router-dom';
 
 
 
@@ -19,24 +20,24 @@ function Header () {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mx-auto collapsed-style">
-                    <Nav.Link
+                    <Link
                         id="teaching-material"
                         className={activeLink === 'teaching-material' ? activeLinkStyle : normalLinkStyle } 
-                        href="#" 
+                        to="/material" 
                         onClick={() => setActiveLink('teaching-material')}>Teaching Material
-                    </Nav.Link>
-                    <Nav.Link
-                        id="exercices"
-                        className={activeLink === 'exercices' ? activeLinkStyle : normalLinkStyle } 
-                        href="#" 
-                        onClick={() => setActiveLink('exercices')}>Exercices
-                    </Nav.Link>
-                    <Nav.Link 
+                    </Link>
+                    <Link
+                        id="exercises"
+                        className={activeLink === 'exercises' ? activeLinkStyle : normalLinkStyle } 
+                        to="/exercises" 
+                        onClick={() => setActiveLink('exercises')}>Exercises
+                    </Link>
+                    <Link 
                         id="events" 
                         className={activeLink === 'events' ? activeLinkStyle : normalLinkStyle } 
-                        href="#" 
+                        to="/events" 
                         onClick={() => setActiveLink('events')}>Events
-                    </Nav.Link>
+                    </Link>
                 </Nav>
                 <Nav>
                     <UserPanel className="user-panel" />
