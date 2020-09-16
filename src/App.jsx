@@ -9,10 +9,11 @@ import Exercises from './Exercises/Exercises.jsx';
 import Events from './Events/Events.jsx';
 import exercises from './exercises.json';
 import { Route, Switch } from 'react-router-dom';
+import SingleExercise from './Exercises/SingleExercise';
 
 
 const logged_in = true;
-const student = true;
+const student = false;
 
 const App = () => {
 
@@ -51,18 +52,21 @@ const App = () => {
                     <Login />
                   )
                 }} />
+                <Route path="/single-exercise" render={() =>
+                  <SingleExercise />
+                } />
 
               </Switch>
 
 
             </main>
-            <Footer />
+              <Footer />
           </> :
-          <>
-            <main className="container"><Login /></main>
-          </>
+            <>
+              <main className="container"><Login /></main>
+            </>
       }
-    </div>
+          </div>
   );
 }
 
