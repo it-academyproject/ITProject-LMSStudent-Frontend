@@ -1,0 +1,30 @@
+[
+    {
+        "name": "HTML Foundations",
+        "topic": "HTML",
+        "type": "Video",
+        "link": "URL",
+        "check": true
+    },
+    {
+        "name": "JS Foundations",
+        "topic": "JS",
+        "type": "URL",
+        "link": "SlideShare",
+        "check": true
+    },
+    {
+        "name": "Java Maven APIs",
+        "topic": "Maven",
+        "type": "PDF",
+        "link": "URL",
+        "check": true
+    },
+    {
+        "name": ".Net Foundations",
+        "topic": ".Net",
+        "type": "PDF",
+        "link": "URL",
+        "check": false
+    }
+]

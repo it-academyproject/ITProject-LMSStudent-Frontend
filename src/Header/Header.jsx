@@ -5,11 +5,7 @@ import UserPanel from './UserPanel.jsx';
 import './Header.scss';
 import { Link } from 'react-router-dom';
 
-
-
-
-function Header () {
-
+const Header = () => {
     const [activeLink, setActiveLink] = useState();
     const normalLinkStyle= "nav-item px-3 py-1 mx-5 my-0 clear-link";
     const activeLinkStyle = "nav-item px-3 py-1 mx-5 my-0 active-link clear-link";
@@ -44,7 +40,7 @@ function Header () {
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
-    )
+    );
 }
 
 export default Header;

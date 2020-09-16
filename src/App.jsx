@@ -4,7 +4,7 @@ import Header from './Header/Header.jsx';
 import Footer from './Footer/Footer.jsx';
 import Login from './Login/Login.jsx';
 import MaterialList from './Material/MaterialList.jsx';
-// import teachingMaterial from './teachingMaterial.json';
+import teachingMaterial from './teachingMaterial.json';
 import Exercises from './Exercises/Exercises.jsx';
 import Events from './Events/Events';
 import exercises from './exercises.json';
@@ -12,7 +12,7 @@ import { Route, Switch } from 'react-router-dom';
 
 
 const logged_in = true;
-const student = true;
+const student = false;
 
 const App = () => {
 
@@ -54,7 +54,6 @@ const App = () => {
             <main className="container"><Login /></main>
           </>
       }
-
     </div>
   );
 }

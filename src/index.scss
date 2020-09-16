@@ -10,27 +10,26 @@ $text-color: #48494b;
 
 h1 {
   font-size: 2em !important;
-  color: #48494B;
+  color: $text-color;
 }
 
 h2 {
   font-size: 1.5em !important;
-  color: #48494B;
+  color: $text-color;
 }
 
 p {
   font-size: 1em;
-  color: #48494B;
+  color: $text-color;
 }
 
 label {
-  color: #48494B;
+  color: $text-color;
 }
 
 small {
-  color: #48494B;
+  color: $text-color;
 }
-
 
 // STYLING SPECIFIC FOR TABLES
 .table thead th {
@@ -60,7 +59,7 @@ small {
 
 //Exercice icons
 
-.fa-exercice-icons {
+.fa-exercise-icons {
   color: $detail-color;
 }
 

@@ -10,11 +10,11 @@ const ExerciseItem = (props) => {
             <td className="py-2 table-border-right">{exercise.correction_status ? "Finished" : "Pending"}</td>
             <td className="py-2 text-center">
                 <FaRegFile
-                    className="fa-exercice-icons mx-1"
+                    className="fa-exercise-icons mx-1"
                     onClick={() => console.log("Delivered")}
                 />
                 <FaDownload
-                    className="fa-exercice-icons mx-1"
+                    className="fa-exercise-icons mx-1"
                     onClick={() => console.log("Downloading...")}
                 />
             </td>
