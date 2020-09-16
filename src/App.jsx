@@ -6,13 +6,13 @@ import Login from './Login/Login.jsx';
 import MaterialList from './Material/MaterialList.jsx';
 import teachingMaterial from './teachingMaterial.json';
 import Exercises from './Exercises/Exercises.jsx';
-import Events from './Events/Events';
+import Events from './Events/Events.jsx';
 import exercises from './exercises.json';
 import { Route, Switch } from 'react-router-dom';
 
 
 const logged_in = true;
-const student = false;
+const student = true;
 
 const App = () => {
 
@@ -25,6 +25,14 @@ const App = () => {
             <Header />
             <main className="container content d-flex flex-column justify-content-center">
               <Switch>
+                <Route path="/material" render={() => {
+                  return (
+                    <MaterialList
+                      teachingMaterial={teachingMaterial}
+                      student={student}
+                    />
+                  )
+                }} />
                 <Route path="/exercises" render={() => {
                   return (
                     <Exercises
