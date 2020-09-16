@@ -12,7 +12,7 @@ import { Route, Switch } from 'react-router-dom';
 
 
 const logged_in = true;
-const student = false;
+const student = true;
 
 const App = () => {
 
