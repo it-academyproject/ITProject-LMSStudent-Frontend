@@ -12,10 +12,12 @@ const ExerciseItem = (props) => {
                 <FaRegFile
                     className="fa-exercise-icons mx-1"
                     onClick={() => console.log("Delivered")}
+                    style={{ cursor: "pointer" }}
                 />
                 <FaDownload
                     className="fa-exercise-icons mx-1"
                     onClick={() => console.log("Downloading...")}
+                    style={{ cursor: "pointer" }}
                 />
             </td>
         </>;
