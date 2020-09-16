@@ -1,26 +1,52 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.scss';
 import Header from './Header/Header.jsx';
 import Footer from './Footer/Footer.jsx';
 import Login from './Login/Login.jsx';
 import MaterialList from './Material/MaterialList.jsx';
 import teachingMaterial from './teachingMaterial.json';
+import Exercises from './Exercises/Exercises.jsx';
+import Events from './Events/Events';
+import exercises from './exercises.json';
+import { Route, Switch } from 'react-router-dom';
 
-const loggedIn = true;
+
+const logged_in = true;
 const student = false;
 
 const App = () => {
+
   return (
     <div className="App">
+
       {
-        loggedIn ?
+        logged_in ?
           <>
             <Header />
             <main className="container content d-flex flex-column justify-content-center">
-              <MaterialList
-                teachingMaterial={teachingMaterial}
-                student={student}
-              />
+              <Switch>
+                <Route path="/exercises" render={() => {
+                  return (
+                    <Exercises
+                      exercises={exercises}
+                      student={student}
+                    />
+                  )
+                }} />
+                <Route path="/events" render={() => {
+                  return (
+                    <Events />
+                  )
+                }} />
+                <Route path="/login" render={() => {
+                  return (
+                    <Login />
+                  )
+                }} />
+
+              </Switch>
+
+
             </main>
             <Footer />
           </> :

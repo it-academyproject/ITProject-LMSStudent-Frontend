@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import UserPanel from './UserPanel';
+import UserPanel from './UserPanel.jsx';
 import './Header.scss';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [activeLink, setActiveLink] = useState();
+    const normalLinkStyle= "nav-item px-3 py-1 mx-5 my-0 clear-link";
+    const activeLinkStyle = "nav-item px-3 py-1 mx-5 my-0 active-link clear-link";
 
     return (
         <Navbar className="header" collapseOnSelect expand="lg">
@@ -13,24 +16,24 @@ const Header = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mx-auto collapsed-style">
-                    <Nav.Link
+                    <Link
                         id="teaching-material"
-                        className={activeLink === 'teaching-material' ? "nav-item px-3 mx-5 my-0 h5 active-link" : "nav-item px-3 mx-5 my-0 h5"}
-                        href="#"
+                        className={activeLink === 'teaching-material' ? activeLinkStyle : normalLinkStyle } 
+                        to="/material" 
                         onClick={() => setActiveLink('teaching-material')}>Teaching Material
-                    </Nav.Link>
-                    <Nav.Link
-                        id="exercices"
-                        className={activeLink === 'exercices' ? "nav-item px-3 mx-5 my-0 h5 active-link" : "nav-item px-3 mx-5 my-0 h5"}
-                        href="#"
-                        onClick={() => setActiveLink('exercices')}>Exercices
-                    </Nav.Link>
-                    <Nav.Link
-                        id="events"
-                        className={activeLink === 'events' ? "nav-item px-3 mx-5 my-0 h5 active-link" : "nav-item px-3 mx-5 my-0 h5"}
-                        href="#"
+                    </Link>
+                    <Link
+                        id="exercises"
+                        className={activeLink === 'exercises' ? activeLinkStyle : normalLinkStyle } 
+                        to="/exercises" 
+                        onClick={() => setActiveLink('exercises')}>Exercises
+                    </Link>
+                    <Link 
+                        id="events" 
+                        className={activeLink === 'events' ? activeLinkStyle : normalLinkStyle } 
+                        to="/events" 
                         onClick={() => setActiveLink('events')}>Events
-                    </Nav.Link>
+                    </Link>
                 </Nav>
                 <Nav>
                     <UserPanel className="user-panel" />

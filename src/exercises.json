@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Repeated words",
+        "estimated_time": "2 days",
+        "correction_status": false,
+        "file": "URL",
+        "unchecked": 2
+    },
+    {
+        "name": "Vars",
+        "estimated_time": "3 days",
+        "correction_status": false,
+        "file": "Video",
+        "unchecked": 7
+    },
+    {
+        "name": "Cities",
+        "estimated_time": "1 week",
+        "correction_status": false,
+        "file": "URL",
+        "unchecked": 4
+    },
+    {
+        "name": "Restaurant",
+        "estimated_time": "2 weeks",
+        "correction_status": false,
+        "file": "PDF",
+        "unchecked": 5
+    }
+]
