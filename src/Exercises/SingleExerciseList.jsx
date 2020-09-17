@@ -2,6 +2,8 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
+import SingeExerciseItem from './SingleExerciseItem.jsx';
+import SingleExerciseItem from './SingleExerciseItem.jsx';
 
 const SingleExerciseList = () => {
 
@@ -10,37 +12,36 @@ const SingleExerciseList = () => {
             id: 0,
             name: "CSS variables",
             studentName: "John Cena",
-            update: new Date(),
-            file: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            check: false
+            update: "10/07/2020",
+            file: "https://www.youtube.com/watch?v=oHg5SJYRHA0",
+            check: true
         },
         {
             id: 1,
             name: "CSS variables",
             studentName: "Ric Flair",
-            update: new Date(),
-            file: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            check: false
+            update: "10/07/2020",
+            file: "https://www.youtube.com/watch?v=oHg5SJYRHA0",
+            check: true
         },
         {
             id: 2,
             name: "CSS variables",
             studentName: "Hulk Hogan",
-            status: "Pending",
-            update: new Date(),
-            file: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            update: "10/07/2020",
+            file: "https://www.youtube.com/watch?v=oHg5SJYRHA0",
             check: false
         },
         {
             id: 3,
             name: "CSS variables",
             studentName: "Steve Austin",
-            status: "Pending",
-            update: new Date(),
-            file: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            update: "10/07/2020",
+            file: "https://www.youtube.com/watch?v=oHg5SJYRHA0",
             check: false
         },
     ];
+    
 
 
     return (
@@ -58,7 +59,7 @@ const SingleExerciseList = () => {
                     </thead>
                     <tbody>
                         {
-
+                            singleExercises.map((exercise, index) => <SingleExerciseItem key={index} content={exercise} />)
                         }
                     </tbody>
                 </Table>

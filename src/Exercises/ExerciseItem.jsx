@@ -7,7 +7,7 @@ const ExerciseItem = (props) => {
 
     const { exercise, student } = props;
 
-
+    
 
     const student_view =
         <>
