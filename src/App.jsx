@@ -8,7 +8,7 @@ import teachingMaterial from './teachingMaterial.json';
 import Exercises from './Exercises/Exercises.jsx';
 import Events from './Events/Events.jsx';
 import exercises from './exercises.json';
-import { Route, Switch, useRouteMatch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import SingleExercise from './Exercises/SingleExercise';
 
 
@@ -18,7 +18,8 @@ const student = false;
 
 
 const App = () => {
-  const { path } = useRouteMatch();
+
+
   return (
     <div className="App">
 

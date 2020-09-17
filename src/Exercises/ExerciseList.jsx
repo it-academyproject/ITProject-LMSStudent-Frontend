@@ -3,8 +3,7 @@ import ExerciseItem from './ExerciseItem.jsx';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
-import { Switch, Route, Link, useRouteMatch } from 'react-router-dom';
-import SingleExercise from './SingleExercise.jsx';
+
 
 const ExerciseList = (props) => {
 

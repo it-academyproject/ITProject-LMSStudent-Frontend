@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 import SingleExerciseItem from './SingleExerciseItem.jsx';
-import singleExercises from  '../singleExerciseList.json';
+import singleExercises from '../singleExerciseList.json';
 
 const SingleExerciseList = () => {
 

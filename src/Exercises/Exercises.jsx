@@ -20,7 +20,7 @@ const Exercises = (props) => {
                     {student || <Link to="/single-exercise" className="mt-4 btn-style float-right">New Exercise</Link>}
                 </Col>
             </Row>
-            
+
         </div>
 
     )

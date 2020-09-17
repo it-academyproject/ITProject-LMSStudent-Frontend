@@ -8,13 +8,14 @@ import SingleExerciseList from './SingleExerciseList';
 
 
 const SingleExercise = () => {
+
     return (
         <Container fluid>
             <Row>
-                <Col xs={12} lg={6} className="my-3">
+                <Col xs={12} xl={6} className="my-3">
                     <SingleExerciseForm />
                 </Col>
-                <Col xs={12} lg={6} className="my-3">
+                <Col xs={12} xl={6} className="my-3">
                     <SingleExerciseList />
                 </Col>
             </Row>
