@@ -70,6 +70,7 @@ small {
   background-color: $detail-color;
   color: $btn-text !important;
   padding: 0.5rem 1rem;
+  border: none;
   &:hover {
       text-decoration: none;
       background-color: $btn-hover-color;

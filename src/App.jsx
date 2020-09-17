@@ -6,15 +6,19 @@ import Login from './Login/Login.jsx';
 import MaterialList from './Material/MaterialList.jsx';
 import teachingMaterial from './teachingMaterial.json';
 import Exercises from './Exercises/Exercises.jsx';
-import Events from './Events/Events';
+import Events from './Events/Events.jsx';
 import exercises from './exercises.json';
 import { Route, Switch } from 'react-router-dom';
+import SingleExercise from './Exercises/SingleExercise';
+
 
 
 const logged_in = true;
 const student = false;
 
+
 const App = () => {
+
 
   return (
     <div className="App">
@@ -25,7 +29,15 @@ const App = () => {
             <Header />
             <main className="container content d-flex flex-column justify-content-center">
               <Switch>
-                <Route path="/exercises" render={() => {
+                <Route path="/material" render={() => {
+                  return (
+                    <MaterialList
+                      teachingMaterial={teachingMaterial}
+                      student={student}
+                    />
+                  )
+                }} />
+                <Route exact path="/exercises" render={() => {
                   return (
                     <Exercises
                       exercises={exercises}
@@ -43,6 +55,12 @@ const App = () => {
                     <Login />
                   )
                 }} />
+                <Route path="/single-exercise" render={() =>
+                  <SingleExercise />
+                } />
+                <Route path={`/exercises/:id`} render={() =>
+                  <SingleExercise />
+                } />
 
               </Switch>
 

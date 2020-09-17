@@ -11,14 +11,16 @@ const Exercises = (props) => {
 
     const { exercises, student } = props;
 
+
     return (
         <div>
             <ExerciseList exercises={exercises} student={student} />
             <Row className="d-flex justify-content-center">
                 <Col xs={12} lg={10}>
-                    {student || <Link className="mt-4 btn-style float-right">New Exercise</Link>}
+                    {student || <Link to="/single-exercise" className="mt-4 btn-style float-right">New Exercise</Link>}
                 </Col>
             </Row>
+
         </div>
 
     )
