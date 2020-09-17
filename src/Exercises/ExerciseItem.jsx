@@ -1,8 +1,13 @@
 import React from 'react';
 import { FaRegFile, FaDownload } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const ExerciseItem = (props) => {
+
+
     const { exercise, student } = props;
+
+
 
     const student_view =
         <>
@@ -21,11 +26,14 @@ const ExerciseItem = (props) => {
                 />
             </td>
         </>;
-    const teacher_view = <td className="py-2">{exercise.unchecked}</td>
+    const teacher_view =
+        <>
+            <td className="py-2 table-border-right"><Link to="/single-exercise">{exercise.name}</Link></td>
+            <td className="py-2">{exercise.unchecked}</td>
+        </>
 
     return (
         <tr>
-            <td className="py-2 table-border-right">{exercise.name}</td>
             {
                 student ? student_view : teacher_view
             }
