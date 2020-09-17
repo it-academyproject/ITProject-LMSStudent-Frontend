@@ -18,10 +18,6 @@ const MaterialList = (props) => {
         )
     })
 
-    // click nombre profe lleva a editar
-    // click link profe lleva al material
-    // click link estudiante accede al material
-
     return (
         <Row className="d-flex justify-content-center">
             <Col xs={12} lg={10}>

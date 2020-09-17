@@ -9,44 +9,47 @@ import Exercises from './Exercises/Exercises.jsx';
 import Events from './Events/Events';
 import exercises from './exercises.json';
 import { Route, Switch } from 'react-router-dom';
+import SingleMaterial from './Material/SingleMaterial';
 
 
 const logged_in = true;
 const student = false;
 
-const App = () => {
+// close hamburger navbar after opening new URL?
 
+const App = () => {
   return (
     <div className="App">
-
       {
         logged_in ?
           <>
             <Header />
             <main className="container content d-flex flex-column justify-content-center">
               <Switch>
-                <Route path="/exercises" render={() => {
-                  return (
-                    <Exercises
-                      exercises={exercises}
-                      student={student}
-                    />
-                  )
-                }} />
-                <Route path="/events" render={() => {
-                  return (
-                    <Events />
-                  )
-                }} />
-                <Route path="/login" render={() => {
-                  return (
-                    <Login />
-                  )
-                }} />
-
+                <Route path="/login" render={() => (
+                  <Login />
+                )} />
+                <Route path="/material" render={() => (
+                  <MaterialList
+                    teachingMaterial={teachingMaterial}
+                    student={student}
+                  />
+                )} />
+                <Route path="/exercises" render={() => (
+                  <Exercises
+                    exercises={exercises}
+                    student={student}
+                  />
+                )} />
+                <Route path="/events" render={() => (
+                  <Events />
+                )} />
+                <Route path="/single-material" render={() => (
+                  <SingleMaterial
+                    material={teachingMaterial}
+                  />
+                )} />
               </Switch>
-
-
             </main>
             <Footer />
           </> :
