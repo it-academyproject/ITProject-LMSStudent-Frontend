@@ -2,46 +2,11 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
-import SingeExerciseItem from './SingleExerciseItem.jsx';
 import SingleExerciseItem from './SingleExerciseItem.jsx';
+import singleExercises from  '../singleExerciseList.json';
 
 const SingleExerciseList = () => {
 
-    const singleExercises = [
-        {
-            id: 0,
-            name: "CSS variables",
-            studentName: "John Cena",
-            update: "10/07/2020",
-            file: "https://www.youtube.com/watch?v=oHg5SJYRHA0",
-            check: true
-        },
-        {
-            id: 1,
-            name: "CSS variables",
-            studentName: "Ric Flair",
-            update: "10/07/2020",
-            file: "https://www.youtube.com/watch?v=oHg5SJYRHA0",
-            check: true
-        },
-        {
-            id: 2,
-            name: "CSS variables",
-            studentName: "Hulk Hogan",
-            update: "10/07/2020",
-            file: "https://www.youtube.com/watch?v=oHg5SJYRHA0",
-            check: false
-        },
-        {
-            id: 3,
-            name: "CSS variables",
-            studentName: "Steve Austin",
-            update: "10/07/2020",
-            file: "https://www.youtube.com/watch?v=oHg5SJYRHA0",
-            check: false
-        },
-    ];
-    
 
 
     return (

@@ -8,15 +8,17 @@ import teachingMaterial from './teachingMaterial.json';
 import Exercises from './Exercises/Exercises.jsx';
 import Events from './Events/Events.jsx';
 import exercises from './exercises.json';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import SingleExercise from './Exercises/SingleExercise';
+
 
 
 const logged_in = true;
 const student = false;
 
-const App = () => {
 
+const App = () => {
+  const { path } = useRouteMatch();
   return (
     <div className="App">
 
@@ -34,7 +36,7 @@ const App = () => {
                     />
                   )
                 }} />
-                <Route path="/exercises" render={() => {
+                <Route exact path="/exercises" render={() => {
                   return (
                     <Exercises
                       exercises={exercises}
@@ -55,18 +57,21 @@ const App = () => {
                 <Route path="/single-exercise" render={() =>
                   <SingleExercise />
                 } />
+                <Route path={`/exercises/:id`} render={() =>
+                  <SingleExercise />
+                } />
 
               </Switch>
 
 
             </main>
-              <Footer />
+            <Footer />
           </> :
-            <>
-              <main className="container"><Login /></main>
-            </>
+          <>
+            <main className="container"><Login /></main>
+          </>
       }
-          </div>
+    </div>
   );
 }
 

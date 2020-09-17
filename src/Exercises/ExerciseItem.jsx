@@ -1,11 +1,22 @@
 import React from 'react';
 import { FaRegFile, FaDownload } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Switch, Route, Link, useRouteMatch } from 'react-router-dom';
 
 const ExerciseItem = (props) => {
 
 
     const { exercise, student } = props;
+
+    const { path, url } = useRouteMatch();
+
+    const replaceSpaces = (str) => {
+        let replaced = str.replace(" ", "-");
+        if (!(replaced.search(" ") + 1)) {
+            return replaced;
+        }
+
+        return this.replaceSpaces(replaced);
+    }
 
     
 
@@ -28,7 +39,7 @@ const ExerciseItem = (props) => {
         </>;
     const teacher_view =
         <>
-            <td className="py-2 table-border-right"><Link to="/single-exercise">{exercise.name}</Link></td>
+            <td className="py-2 table-border-right"><Link to={`/exercises/${replaceSpaces(exercise.name)}`}>{exercise.name}</Link></td>
             <td className="py-2">{exercise.unchecked}</td>
         </>
 
@@ -38,6 +49,7 @@ const ExerciseItem = (props) => {
                 student ? student_view : teacher_view
             }
         </tr>
+
     )
 }
 

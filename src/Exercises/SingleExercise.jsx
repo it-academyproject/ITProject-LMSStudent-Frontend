@@ -11,10 +11,10 @@ const SingleExercise = () => {
     return (
         <Container fluid>
             <Row>
-                <Col xs={6}>
+                <Col xs={12} lg={6} className="my-3">
                     <SingleExerciseForm />
                 </Col>
-                <Col xs={6}>
+                <Col xs={12} lg={6} className="my-3">
                     <SingleExerciseList />
                 </Col>
             </Row>
