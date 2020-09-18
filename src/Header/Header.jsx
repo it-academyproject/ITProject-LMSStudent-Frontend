@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [activeLink, setActiveLink] = useState();
-    const normalLinkStyle= "nav-item px-3 py-1 mx-5 my-0 clear-link";
+    const normalLinkStyle = "nav-item px-3 py-1 mx-5 my-0 clear-link";
     const activeLinkStyle = "nav-item px-3 py-1 mx-5 my-0 active-link clear-link";
 
     return (
@@ -18,20 +18,20 @@ const Header = () => {
                 <Nav className="mx-auto collapsed-style">
                     <Link
                         id="teaching-material"
-                        className={activeLink === 'teaching-material' ? activeLinkStyle : normalLinkStyle } 
-                        to="/material" 
+                        className={activeLink === 'teaching-material' ? activeLinkStyle : normalLinkStyle}
+                        to="/material"
                         onClick={() => setActiveLink('teaching-material')}>Teaching Material
                     </Link>
                     <Link
                         id="exercises"
-                        className={activeLink === 'exercises' ? activeLinkStyle : normalLinkStyle } 
-                        to="/exercises" 
+                        className={activeLink === 'exercises' ? activeLinkStyle : normalLinkStyle}
+                        to="/exercises"
                         onClick={() => setActiveLink('exercises')}>Exercises
                     </Link>
-                    <Link 
-                        id="events" 
-                        className={activeLink === 'events' ? activeLinkStyle : normalLinkStyle } 
-                        to="/events" 
+                    <Link
+                        id="events"
+                        className={activeLink === 'events' ? activeLinkStyle : normalLinkStyle}
+                        to="/events"
                         onClick={() => setActiveLink('events')}>Events
                     </Link>
                 </Nav>

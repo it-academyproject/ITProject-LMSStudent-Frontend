@@ -17,7 +17,7 @@ const SingleExerciseList = () => {
                             <th className="py-2 table-border-right">Status</th>
                             <th className="py-2 table-border-right">Last Update</th>
                             <th className="py-2 table-border-right">File</th>
-                            <th className="py-2 table-border-right">Check</th>
+                            <th className="py-2">Check</th>
                         </tr>
                     </thead>
                     <tbody>
