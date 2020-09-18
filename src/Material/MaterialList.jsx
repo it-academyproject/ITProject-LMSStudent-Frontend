@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 
 const MaterialList = (props) => {
-    let { teachingMaterial, student } = props;
+    const { teachingMaterial, student } = props;
 
     const material = teachingMaterial.map((material, i) => {
         return (
@@ -15,8 +15,8 @@ const MaterialList = (props) => {
                 material={material}
                 student={student}
             />
-        )
-    })
+        );
+    });
 
     return (
         <Row className="d-flex justify-content-center">

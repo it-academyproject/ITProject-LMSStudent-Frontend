@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-
-
 const Exercises = (props) => {
 
     const { exercises, student } = props;
@@ -16,12 +14,12 @@ const Exercises = (props) => {
             <ExerciseList exercises={exercises} student={student} />
             <Row className="d-flex justify-content-center">
                 <Col xs={12} lg={10}>
-                    {student || <Link className="mt-4 btn-style float-right">New Exercise</Link>}
+                    {student || <Link to="/single-exercise" className="mt-4 btn-style float-right">New Exercise</Link>}
                 </Col>
             </Row>
-        </div>
 
-    )
+        </div>
+    );
 }
 
-export default Exercises
+export default Exercises;

@@ -4,7 +4,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import { Link } from 'react-router-dom';
 
 const MaterialItem = (props) => {
-    let { material, student } = props;
+    const { material, student } = props;
 
     let nameCol;
     let fifthCol;
