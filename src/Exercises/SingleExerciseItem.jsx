@@ -5,7 +5,6 @@ const SingleExerciseItem = (props) => {
 
     const { content } = props;
 
-
     return (
         <tr>
             <td className="py-2 table-border-right">{content.studentName}</td>
@@ -20,7 +19,7 @@ const SingleExerciseItem = (props) => {
                 />
             </td>
         </tr>
-    )
+    );
 }
 
-export default SingleExerciseItem
+export default SingleExerciseItem;

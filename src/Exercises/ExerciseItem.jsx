@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const ExerciseItem = (props) => {
 
-
     const { exercise, student } = props;
 
     const replaceSpaces = (str) => {
@@ -15,8 +14,6 @@ const ExerciseItem = (props) => {
 
         return this.replaceSpaces(replaced);
     }
-
-
 
     const student_view =
         <>

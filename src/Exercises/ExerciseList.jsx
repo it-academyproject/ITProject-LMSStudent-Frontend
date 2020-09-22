@@ -4,7 +4,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 
-
 const ExerciseList = (props) => {
 
     const { exercises, student } = props;
@@ -45,9 +44,6 @@ const ExerciseList = (props) => {
 
         </>
     );
-
-
 }
-
 
 export default ExerciseList;

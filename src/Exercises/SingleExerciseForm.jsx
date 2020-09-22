@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-
+import bsCustomFileInput from 'bs-custom-file-input';
 
 const SingleExerciseForm = () => {
 
     const topicList = ["Javascript", ".NET", "Bootstrap", "CSS", "HTML"];
 
+    useEffect(() => bsCustomFileInput.init(), []);
 
     return (
         <Container fluid className="d-flex justify-content-center">
@@ -18,7 +19,7 @@ const SingleExerciseForm = () => {
                     <Col>
                         <Form.Group>
                             {/* <Form.Label>Title:</Form.Label> */}
-                            <Form.Control placeholder="Title" />
+                            <Form.Control className="shadow-none" placeholder="Title" />
                         </Form.Group>
                     </Col>
                 </Row>
@@ -26,7 +27,7 @@ const SingleExerciseForm = () => {
                     <Col sm={6}>
                         <Form.Group className="Group">
                             {/* <Form.Label>Topic:</Form.Label> */}
-                            <Form.Control as="select" defaultValue="Select a topic...">
+                            <Form.Control className="shadow-none" as="select" defaultValue="Select a topic...">
                                 <option>Select a topic...</option>
                                 {topicList.map((topic, index) => <option key={index}>{topic}</option>)}
                             </Form.Control>
@@ -34,8 +35,8 @@ const SingleExerciseForm = () => {
                     </Col>
                     <Col sm={6}>
                         <Form.Group className="d-flex">
-                            <Form.Label className="align-self-end mb-0 mr-3">Deadline:</Form.Label>
-                            <Form.Control className="input-costum-style text-center" type="number" min={1} />
+                            <Form.Label className="align-self-end mb-0 mr-3">Estimated days:</Form.Label>
+                            <Form.Control className="input-costum-style text-center shadow-none" type="number" min={1} />
                         </Form.Group>
                     </Col>
                 </Row>
@@ -51,7 +52,7 @@ const SingleExerciseForm = () => {
                         </Form.Group>
                     </Col>
                 </Row>
-                <Row className="d-flex justify-content-around align-items-center mt-4">
+                <Row className="d-flex justify-content-around align-items-center">
                     <Col>
                         <Form.Group className="text-center">
                             <Button className="btn-style mx-5">Upload</Button>
@@ -61,7 +62,7 @@ const SingleExerciseForm = () => {
                 </Row>
             </Form>
         </Container>
-    )
+    );
 }
 
 export default SingleExerciseForm;

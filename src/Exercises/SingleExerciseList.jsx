@@ -7,8 +7,6 @@ import singleExercises from '../singleExerciseList.json';
 
 const SingleExerciseList = () => {
 
-
-
     return (
         <Row className="d-flex justify-content-center">
             <Col xs={12} lg={10}>
@@ -19,7 +17,7 @@ const SingleExerciseList = () => {
                             <th className="py-2 table-border-right">Status</th>
                             <th className="py-2 table-border-right">Last Update</th>
                             <th className="py-2 table-border-right">File</th>
-                            <th className="py-2 table-border-right">Check</th>
+                            <th className="py-2">Check</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -30,9 +28,7 @@ const SingleExerciseList = () => {
                 </Table>
             </Col>
         </Row>
-
-
     );
 }
 
-export default SingleExerciseList
+export default SingleExerciseList;

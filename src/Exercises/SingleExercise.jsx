@@ -6,7 +6,6 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import SingleExerciseList from './SingleExerciseList';
 
-
 const SingleExercise = () => {
 
     return (

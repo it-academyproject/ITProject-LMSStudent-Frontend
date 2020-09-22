@@ -5,12 +5,9 @@ import { Link } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-
-
 const Exercises = (props) => {
 
     const { exercises, student } = props;
-
 
     return (
         <div>
@@ -22,8 +19,7 @@ const Exercises = (props) => {
             </Row>
 
         </div>
-
-    )
+    );
 }
 
-export default Exercises
+export default Exercises;
